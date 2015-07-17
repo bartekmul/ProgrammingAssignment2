@@ -4,7 +4,8 @@
 
 ##     We assume that the matrix supplied is always invertible, and so it has to be square matrix
 
-##     Here we catch inverse of the matrix.
+##     Here we catch inverse of the matrix and the matrix itself. 
+##     Also we can change matrix, and add it's inverse computed somewhere else.
 
 makeCacheMatrix <- function(x = matrix()) {
   inverse <- NULL
@@ -21,7 +22,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## Here we compute the inverse of the matrix if it hasn't already been calculated, in other case we return this inverse.
 
 cacheSolve <- function(x, ...) {
   inverse <- x$getinverse()
